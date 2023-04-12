@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background-image: url("./fon.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.titulo{
+    padding: 100px; 
+}
+#toggle {
+    display: none;
+  }
+
+  #label_toggle{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    color: black;
+    
+  }
+  .dark{
+    background-color: #030303;
+    color: rgb(255, 255, 255);
+    transition: all 1.5s ease;
+  }
+  .nav-enlace{
+    display: inline-block;
+    background: rgba(222, 44, 25, 0.828);
+    color: #f4f5f1;
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-decoration: none;
+    width: 400px;
+    font-size: 2.0em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+.nav-enlace:hover{
+    background-color: transparent;
+    border: 2px solid rgb(186, 34, 34);
+    color:rgb(186, 34, 34);
+}
+nav{
+    background: transparent;
+    padding: 40px;
+    display:flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    
+}
+main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: auto;
+}
+
+figure,
+figure img {
+    display: inline-block;
+    width: 100%;
+}
+
+figure {
+    position: relative;
+    transition: all ease .4s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+    cursor: pointer;
+   
+}
+
+figure::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    transition: 0.3s all ease;
+}
+
+figure:hover:after {
+    background: rgba(255, 255, 255, 0.137);
+}
+
+figure.opened {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+figure .back {
+    display: block;
+    backface-visibility: hidden;
+}
+
+figure .searched-image {
+    position: absolute;
+    top: 0;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
